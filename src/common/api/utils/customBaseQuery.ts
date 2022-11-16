@@ -1,4 +1,5 @@
 import { fetchBaseQuery } from "@reduxjs/toolkit/dist/query";
+import { apiKey } from "../../../env/apiKey";
 
 /**
  * The custom base query prepares the headers of each request in order to communicate with the azure functions
@@ -6,10 +7,7 @@ import { fetchBaseQuery } from "@reduxjs/toolkit/dist/query";
 const customBaseQuery = fetchBaseQuery({
   baseUrl: "https://destifyfunc-api-dev.azurewebsites.net/api/rooms",
   prepareHeaders: (headers) => {
-    headers.set(
-      "x-functions-key",
-      "trsmthTaK7p/CS6CSQamg0zB9xxmd9w5COrtM9vS1azadc4sksMYPA=="
-    );
+    headers.set("x-functions-key", apiKey);
     return headers;
   },
 });
