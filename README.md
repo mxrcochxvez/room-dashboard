@@ -1,4 +1,12 @@
-# Running the Room Dashboard app
+# Setting up the app
+
+The api key was not included in this project for security reasons. You will need to provide the api key in the following file if you want to run/use the application.
+
+`src/env/apiKey.ts`
+
+All you need to do is add the key in between the quotation marks.
+
+# Running the app
 
 This app uses Yarn as its package manager, it should work with npm as well but for project safety I added the `package-lock.json` file to the ignore list.
 
